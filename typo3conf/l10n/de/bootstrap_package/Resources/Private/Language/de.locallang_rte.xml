@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+
+            <label index="class.text-left">Text: Links</label>
+            <label index="class.text-right">Text: Rechts</label>
+            <label index="class.text-center">Text: Zentriert</label>
+            <label index="class.text-justify">Text: Blocksatz</label>
+
+            <label index="class.lead">Text: Hevorheben</label>
+
+            <label index="class.active">Kontextbezogen: Aktiv</label>
+            <label index="class.danger">Kontextbezogen: Gefahr</label>
+            <label index="class.info">Kontextbezogen: Info</label>
+            <label index="class.success">Kontextbezogen:Erfolgreich</label>
+            <label index="class.warning">Kontextbezogen: Warnung</label>
+
+            <label index="class.visible-lg">Sichtbarkeit: Große Geräte</label>
+            <label index="class.visible-md">Sichtbarkeit: Mittlere Geräte</label>
+            <label index="class.visible-print">Sichtbarkeit: Drucken</label>
+            <label index="class.visible-sm">Sichtbarkeit: Kleine Geräte</label>
+            <label index="class.visible-xs">Sichtbarkeit: Sehr kleine Geräte</label>
+
+            <label index="class.table-striped">Tabelle: Gestreifte Reihen</label>
+            <label index="class.table-bordered">Tabelle: Umrandet</label>
+            <label index="class.table-hover">Tabelle: Mit Mauseffekt</label>
+            <label index="class.table-condensed">Tabelle: Gestaucht</label>
+
+            <label index="class.list-unstyled">Listen: Ungestyled</label>
+            <label index="class.list-inline">Listen: Im Text</label>
+
+            <label index="class.btn">Buttons: Einfach</label>
+            <label index="class.btn-default">Buttons: Standard</label>
+            <label index="class.btn-primary">Buttons: Primär</label>
+            <label index="class.btn-success">Buttons: Erfolgreich</label>
+            <label index="class.btn-warning">Buttons: Warnung</label>
+            <label index="class.btn-danger">Buttons: Gefahr</label>
+            <label index="class.btn-link">Buttons: Link</label>
+            <label index="class.btn-block">Buttons: Block</label>
+
+        </languageKey>
+  </data>
+</T3locallangExt>

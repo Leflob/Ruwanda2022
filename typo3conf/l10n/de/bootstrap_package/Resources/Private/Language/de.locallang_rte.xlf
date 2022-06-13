@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="bootstrap_package" target-language="de">
+        <header/>
+        <body>
+
+            <trans-unit id="class.text-left" approved="yes">
+                <source>Text: Left</source>
+            <target state="translated">Text: Links</target><alt-trans xml:space="preserve" origin="zerlono"><target>Text: Links</target></alt-trans></trans-unit>
+            <trans-unit id="class.text-right" approved="yes">
+                <source>Text: Right</source>
+            <target state="translated">Text: Rechts</target><alt-trans xml:space="preserve" origin="zerlono"><target>Text: Rechts</target></alt-trans></trans-unit>
+            <trans-unit id="class.text-center" approved="yes">
+                <source>Text: Center</source>
+            <target state="translated">Text: Zentriert</target><alt-trans xml:space="preserve" origin="zerlono"><target>Text: Zentriert</target></alt-trans></trans-unit>
+            <trans-unit id="class.text-justify" approved="yes">
+                <source>Text: Justify</source>
+            <target state="translated">Text: Blocksatz</target><alt-trans xml:space="preserve" origin="zerlono"><target>Text: Blocksatz</target></alt-trans></trans-unit>
+
+            <trans-unit id="class.lead" approved="yes">
+                <source>Text: Lead</source>
+            <target state="translated">Text: Hevorheben</target><alt-trans xml:space="preserve" origin="zerlono"><target>Text: Hevorheben</target></alt-trans></trans-unit>
+
+            <trans-unit id="class.active" approved="yes">
+                <source>Contextual: Active</source>
+            <target state="translated">Kontextbezogen: Aktiv</target><alt-trans xml:space="preserve" origin="zerlono"><target>Kontextbezogen: Aktiv</target></alt-trans></trans-unit>
+            <trans-unit id="class.danger" approved="yes">
+                <source>Contextual: Danger</source>
+            <target state="translated">Kontextbezogen: Gefahr</target><alt-trans xml:space="preserve" origin="zerlono"><target>Kontextbezogen: Gefahr</target></alt-trans></trans-unit>
+            <trans-unit id="class.info" approved="yes">
+                <source>Contextual: Info</source>
+            <target state="translated">Kontextbezogen: Info</target><alt-trans xml:space="preserve" origin="zerlono"><target>Kontextbezogen: Info</target></alt-trans></trans-unit>
+            <trans-unit id="class.success" approved="yes">
+                <source>Contextual: Success</source>
+            <target state="translated">Kontextbezogen:Erfolgreich</target><alt-trans xml:space="preserve" origin="zerlono"><target>Kontextbezogen:Erfolgreich</target></alt-trans></trans-unit>
+            <trans-unit id="class.warning" approved="yes">
+                <source>Contextual: Warning</source>
+            <target state="translated">Kontextbezogen: Warnung</target><alt-trans xml:space="preserve" origin="zerlono"><target>Kontextbezogen: Warnung</target></alt-trans></trans-unit>
+
+            <trans-unit id="class.visible-lg" approved="yes">
+                <source>Visibility: Large devices</source>
+            <target state="translated">Sichtbarkeit: Große Geräte</target><alt-trans xml:space="preserve" origin="zerlono"><target>Sichtbarkeit: Große Geräte</target></alt-trans></trans-unit>
+            <trans-unit id="class.visible-md" approved="yes">
+                <source>Visibility: Medium devices</source>
+            <target state="translated">Sichtbarkeit: Mittlere Geräte</target><alt-trans xml:space="preserve" origin="zerlono"><target>Sichtbarkeit: Mittlere Geräte</target></alt-trans></trans-unit>
+            <trans-unit id="class.visible-print" approved="yes">
+                <source>Visibility: Print</source>
+            <target state="translated">Sichtbarkeit: Drucken</target><alt-trans xml:space="preserve" origin="zerlono"><target>Sichtbarkeit: Drucken</target></alt-trans></trans-unit>
+            <trans-unit id="class.visible-sm" approved="yes">
+                <source>Visibility: Small devices</source>
+            <target state="translated">Sichtbarkeit: Kleine Geräte</target><alt-trans xml:space="preserve" origin="zerlono"><target>Sichtbarkeit: Kleine Geräte</target></alt-trans></trans-unit>
+            <trans-unit id="class.visible-xs" approved="yes">
+                <source>Visibility: Extra small devices</source>
+            <target state="translated">Sichtbarkeit: Sehr kleine Geräte</target><alt-trans xml:space="preserve" origin="zerlono"><target>Sichtbarkeit: Sehr kleine Geräte</target></alt-trans></trans-unit>
+
+            <trans-unit id="class.table-striped" approved="yes">
+                <source>Table: Striped rows</source>
+            <target state="translated">Tabelle: Gestreifte Reihen</target><alt-trans xml:space="preserve" origin="zerlono"><target>Tabelle: Gestreifte Reihen</target></alt-trans></trans-unit>
+            <trans-unit id="class.table-bordered" approved="yes">
+                <source>Table: Bordered table</source>
+            <target state="translated">Tabelle: Umrandet</target><alt-trans xml:space="preserve" origin="zerlono"><target>Tabelle: Umrandet</target></alt-trans></trans-unit>
+            <trans-unit id="class.table-hover" approved="yes">
+                <source>Table: Hover rows</source>
+            <target state="translated">Tabelle: Mit Mauseffekt</target><alt-trans xml:space="preserve" origin="zerlono"><target>Tabelle: Mit Mauseffekt</target></alt-trans></trans-unit>
+            <trans-unit id="class.table-condensed" approved="yes">
+                <source>Table: Condensed table</source>
+            <target state="translated">Tabelle: Gestaucht</target><alt-trans xml:space="preserve" origin="zerlono"><target>Tabelle: Gestaucht</target></alt-trans></trans-unit>
+
+            <trans-unit id="class.list-unstyled" approved="yes">
+                <source>Lists: Unstyled</source>
+            <target state="translated">Listen: Ungestyled</target><alt-trans xml:space="preserve" origin="zerlono"><target>Listen: Ungestyled</target></alt-trans></trans-unit>
+            <trans-unit id="class.list-inline" approved="yes">
+                <source>Lists: Inline</source>
+            <target state="translated">Listen: Im Text</target><alt-trans xml:space="preserve" origin="zerlono"><target>Listen: Im Text</target></alt-trans></trans-unit>
+
+            <trans-unit id="class.btn" approved="yes">
+                <source>Buttons: Base</source>
+            <target state="translated">Buttons: Einfach</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Einfach</target></alt-trans></trans-unit>
+            <trans-unit id="class.btn-default" approved="yes">
+                <source>Buttons: Default</source>
+            <target state="translated">Buttons: Standard</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Standard</target></alt-trans></trans-unit>
+            <trans-unit id="class.btn-primary" approved="yes">
+                <source>Buttons: Primary</source>
+            <target state="translated">Buttons: Primär</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Primär</target></alt-trans></trans-unit>
+            <trans-unit id="class.btn-success" approved="yes">
+                <source>Buttons: Success</source>
+            <target state="translated">Buttons: Erfolgreich</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Erfolgreich</target></alt-trans></trans-unit>
+            <trans-unit id="class.btn-warning" approved="yes">
+                <source>Buttons: Warning</source>
+            <target state="translated">Buttons: Warnung</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Warnung</target></alt-trans></trans-unit>
+            <trans-unit id="class.btn-danger" approved="yes">
+                <source>Buttons: Danger</source>
+            <target state="translated">Buttons: Gefahr</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Gefahr</target></alt-trans></trans-unit>
+            <trans-unit id="class.btn-link" approved="yes">
+                <source>Buttons: Link</source>
+            <target state="translated">Buttons: Link</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Link</target></alt-trans></trans-unit>
+            <trans-unit id="class.btn-block" approved="yes">
+                <source>Buttons: Block</source>
+            <target state="translated">Buttons: Block</target><alt-trans xml:space="preserve" origin="zerlono"><target>Buttons: Block</target></alt-trans></trans-unit>
+
+        </body>
+    </file>
+</xliff>

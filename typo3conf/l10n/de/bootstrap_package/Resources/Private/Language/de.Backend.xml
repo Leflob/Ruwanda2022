@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+
+            <label index="theme_name">Bootstrap Package</label>
+
+            <label index="pages.nav_icon">Navigations-Symbol</label>
+            <label index="pages.thumbnail">Miniaturansicht</label>
+
+            <label index="backend_layout.default">Standard</label>
+            <label index="backend_layout.simple">Einfach</label>
+            <label index="backend_layout.2_columns">2 Spalten</label>
+            <label index="backend_layout.2_columns_25_75">2 Spalten 25/75</label>
+            <label index="backend_layout.2_columns_50_50">2 Spalten 50/50</label>
+            <label index="backend_layout.2_columns_offset_right">2 Spalten, Versatz rechts</label>
+            <label index="backend_layout.3_columns">3 Spalten</label>
+            <label index="backend_layout.subnavigation_right">Unternavigation Rechts</label>
+            <label index="backend_layout.subnavigation_right_2_columns">Unternavigation Rechts und 2 Spalten</label>
+            <label index="backend_layout.subnavigation_left">Unternavigation Links</label>
+            <label index="backend_layout.subnavigation_left_2_columns">Unternavigation Links und 2 Spalten</label>
+            <label index="backend_layout.special_start">Spezial Startseite</label>
+            <label index="backend_layout.special_feature">Spezial Funktionen</label>
+
+            <label index="backend_layout.column.subnav">Untermenü (keine Bearbeitung)</label>
+
+            <label index="backend_layout.column.left">Links</label>
+            <label index="backend_layout.column.normal">Normal</label>
+            <label index="backend_layout.column.right">Rechts</label>
+            <label index="backend_layout.column.border">Rand</label>
+
+            <label index="backend_layout.column.middle1">Mitte: Links</label>
+            <label index="backend_layout.column.middle2">Mitte: Zentriert</label>
+            <label index="backend_layout.column.middle3">Mitte: Rechts</label>
+
+            <label index="backend_layout.column.main2">Normal 2</label>
+
+            <label index="backend_layout.column.contentbefore">Vor dem Inhalt</label>
+            <label index="backend_layout.column.contentafter">Nach dem Inhalt</label>
+
+            <label index="backend_layout.column.special1">Spezial 1</label>
+            <label index="backend_layout.column.special2">Spezial 2</label>
+            <label index="backend_layout.column.special3">Spezial 3</label>
+            <label index="backend_layout.column.special4">Spezial 4</label>
+            <label index="backend_layout.column.special5">Spezial 5</label>
+            <label index="backend_layout.column.special6">Spezial 6</label>
+            <label index="backend_layout.column.special7">Spezial 7</label>
+            <label index="backend_layout.column.special8">Spezial 8</label>
+            <label index="backend_layout.column.special9">Spezial 9</label>
+            <label index="backend_layout.column.special10">Spezial 10</label>
+
+            <label index="backend_layout.column.footer1">Fußzeile: Links</label>
+            <label index="backend_layout.column.footer2">Fußzeile: Mitte</label>
+            <label index="backend_layout.column.footer3">Fußzeile: Rechts</label>
+
+            <label index="menu.card_dir">Karten von Unterseiten</label>
+            <label index="menu.card_dir.description">Menü einfügen, um Unterseiten als Karten anzuzeigen</label>
+            <label index="menu.card_list">Karten</label>
+            <label index="menu.card_list.description">Menü einfügen, um ausgewählte Seiten als Karten anzuzeigen</label>
+
+            <label index="menu.card.options">Optionen</label>
+            <label index="menu.card.columns">Spalten</label>
+            <label index="menu.card.align">Ausrichtung</label>
+            <label index="menu.card.align.left">Links</label>
+            <label index="menu.card.align.center">Zentriert</label>
+            <label index="menu.card.align.right">Rechts</label>
+
+            <label index="menu.thumbnail_dir">Miniaturansichten der Unterseiten</label>
+            <label index="menu.thumbnail_dir.description">Menü einfügen, um Unterseiten als Miniaturansicht anzuzeigen.</label>
+            <label index="menu.thumbnail_list">Miniaturansichten</label>
+            <label index="menu.thumbnail_list.description">Menü einfügen, um ausgewählte Seiten als Miniaturansicht anzuzeigen.</label>
+
+            <label index="menu.thumbnail.options">Optionen</label>
+            <label index="menu.thumbnail.columns">Spalten</label>
+            <label index="menu.thumbnail.align">Ausrichtung</label>
+            <label index="menu.thumbnail.align.left">Links</label>
+            <label index="menu.thumbnail.align.center">Zentriert</label>
+            <label index="menu.thumbnail.align.right">Rechts</label>
+
+            <label index="content_group.interactive">Interaktiv</label>
+            <label index="content_group.media">Medien</label>
+            <label index="content_group.data">Daten</label>
+            <label index="content_group.text">Text</label>
+            <label index="content_group.social_media">Soziale Medien</label>
+
+            <label index="content_element.csv">CSV</label>
+            <label index="content_element.csv.description">Darstellung einer Tabelle aus einer CSV-Datei</label>
+
+            <label index="content_element.media">Medien</label>
+            <label index="content_element.media.description">Beliebig viele YouTube- und Vimeo-Videos in Spalten und Zeilen mit einer Bildunterschrift.</label>
+
+            <label index="content_element.audio">Audio</label>
+            <label index="content_element.audio.description">Einfügen von Audiodateien</label>
+
+            <label index="content_element.panel">Panel</label>
+            <label index="content_element.panel.description">Panelelement mit einfachem Text einfügen</label>
+
+            <label index="content_element.carousel">Karussell</label>
+            <label index="content_element.carousel.description">Karussell-Element mit unterschiedlichem Inhalt einfügen (Header / Text mit Bild / reines HTML)</label>
+
+            <label index="content_element.carousel_small">Karussell Klein</label>
+            <label index="content_element.carousel_small.description">Karussell-Element mit unterschiedlichem Inhalt einfügen (Header / Text mit Bild / reines HTML)</label>
+
+            <label index="content_element.carousel_fullscreen">Karussell Vollbild</label>
+            <label index="content_element.carousel_fullscreen.description">Karussell-Element mit unterschiedlichem Inhalt einfügen (Header / Text mit Bild / reines HTML)</label>
+
+            <label index="content_element.textcolumn">Text in Spalten</label>
+            <label index="content_element.textcolumn.description">Text in Spalten einfügen</label>
+
+            <label index="content_element.textteaser">Text mit Vorspann</label>
+            <label index="content_element.textteaser.description">Text mit Vorspann einfügen</label>
+
+            <label index="content_element.texticon">Text und Icon</label>
+            <label index="content_element.texticon.description">Bootstrap-Icon mit Text einfügen</label>
+
+            <label index="content_element.accordion">Akkordeon</label>
+            <label index="content_element.accordion.description">Mehrere Akkordeonelemente mit Überschrift und Text einfügen</label>
+
+            <label index="content_element.tab">Tab</label>
+            <label index="content_element.tab.description">Mehrere Tab-Elemente mit Überschrift und Text einfügen</label>
+
+            <label index="content_element.card_group">Kartengruppe</label>
+            <label index="content_element.card_group.description">Einfügen eines Elements mit mehreren Inhaltskarten</label>
+            <label index="content_element.card_group.options">Optionen</label>
+            <label index="content_element.card_group.columns">Spalten</label>
+            <label index="content_element.card_group.align">Ausrichtung</label>
+            <label index="content_element.card_group.align.left">Links</label>
+            <label index="content_element.card_group.align.center">Zentrieren</label>
+            <label index="content_element.card_group.align.right">Rechts</label>
+
+            <label index="card_group_item">Inhaltskarte</label>
+            <label index="card_group_item.tt_content">Kartengruppe</label>
+            <label index="card_group_item.header">Überschrift</label>
+            <label index="card_group_item.subheader">Zwischenüberschrift</label>
+            <label index="card_group_item.image">Bild</label>
+            <label index="card_group_item.bodytext">Text</label>
+            <label index="card_group_item.link">Link</label>
+            <label index="card_group_item.link_title">Titel</label>
+            <label index="card_group_item.link_icon">Icon</label>
+            <label index="card_group_item.link_class">Farbe</label>
+
+            <label index="content_element.icon_group">Icon-Gruppe</label>
+            <label index="content_element.icon_group.description">Einfügen eines Elements mit mehreren Icons</label>
+            <label index="content_element.icon_group.options">Optionen</label>
+            <label index="content_element.icon_group.columns">Spalten</label>
+            <label index="content_element.icon_group.columns.auto">Automatisch</label>
+            <label index="content_element.icon_group.align">Ausrichtung</label>
+            <label index="content_element.icon_group.align.left">Links</label>
+            <label index="content_element.icon_group.align.center">Zentriert</label>
+            <label index="content_element.icon_group.align.right">Rechts</label>
+            <label index="content_element.icon_group.icon_position">Position des Icons</label>
+            <label index="content_element.icon_group.icon_position.left-top">Links: Oben</label>
+            <label index="content_element.icon_group.icon_position.left-center">Links: Mitte</label>
+            <label index="content_element.icon_group.icon_position.right-top">Rechts: Oben</label>
+            <label index="content_element.icon_group.icon_position.right-center">Rechts: Mitte</label>
+            <label index="content_element.icon_group.icon_position.above">Oberhalb</label>
+            <label index="content_element.icon_group.icon_position.below">Unterhalb</label>
+
+            <label index="content_element.listgroup">Listengruppe</label>
+            <label index="content_element.listgroup.description">Einfaches Listengruppe-Element einfügen</label>
+
+            <label index="content_element.external_media">Externe Medien</label>
+            <label index="content_element.external_media.description">Externe Medien von YouTube oder Vimeo einfügen</label>
+
+            <label index="content_element.textmedia">Text &amp; Medien</label>
+
+            <label index="content_element.quote">Zitat</label>
+            <label index="content_element.quote.description">Zitat einfügen</label>
+
+            <label index="quote.text">Zitierter Text</label>
+            <label index="quote.link">Zitat Link</label>
+            <label index="quote.source">Zitat Quelle</label>
+
+            <label index="content_element.social_links">Soziale Links</label>
+            <label index="content_element.social_links.description">Einfügen eines Elements zur Anzeige konfigurierter Social Media-Kanäle</label>
+
+            <label index="content_element.timeline">Timeline</label>
+            <label index="content_element.timeline.description">Einfügen eines Elements zur Anzeige einer Zeitleiste</label>
+
+            <label index="carousel.options">Karussell Optionen</label>
+            <label index="carousel.interval">Intervall in ms</label>
+            <label index="carousel.transition">Übergang</label>
+            <label index="carousel.transition.slide">Gleiten</label>
+            <label index="carousel.transition.fade">Verblassen</label>
+            <label index="carousel.wrap">Zyklisch</label>
+            <label index="carousel.wrap.description">Das Karussell von Anfang an starten, wenn es am Ende angekommen ist.</label>
+            <label index="carousel.show_nav_title">Navigationstitel anzeigen</label>
+            <label index="carousel.show_nav_title.description">Zeigen Sie den Navigationstitel der Datensätze anstelle der Blasen an.</label>
+
+            <label index="carousel_item">Karussell Element</label>
+            <label index="carousel_item.tt_content">Karussell</label>
+            <label index="carousel_item.link">Link</label>
+            <label index="carousel_item.header">Überschrift</label>
+            <label index="carousel_item.header_layout">Überschriftenlayout</label>
+            <label index="carousel_item.header_class">Überschriften Klasse</label>
+            <label index="carousel_item.header_position">Überschrift-Position</label>
+            <label index="carousel_item.header_position.default">Standard</label>
+            <label index="carousel_item.header_position.left">Links</label>
+            <label index="carousel_item.header_position.center">Zentriert</label>
+            <label index="carousel_item.header_position.right">Rechts</label>
+            <label index="carousel_item.subheader">Zwischenüberschrift</label>
+            <label index="carousel_item.subheader_layout">Layout der Zwischenüberschrift</label>
+            <label index="carousel_item.subheader_class">Zwischenüberschriften Klasse</label>
+            <label index="carousel_item.nav_title">Navigationstitel</label>
+            <label index="carousel_item.button_text">Button Text</label>
+            <label index="carousel_item.bodytext">Text</label>
+            <label index="carousel_item.text_color">Textfarbe</label>
+            <label index="carousel_item.image">Bild</label>
+            <label index="carousel_item.background_color">Hintergrundfarbe</label>
+            <label index="carousel_item.background_image">Hintergrundbild</label>
+            <label index="carousel_item.background_image_options">Optionen für Hintergrundbilder</label>
+
+            <label index="carousel_item.item_type.header">Überschrift</label>
+            <label index="carousel_item.item_type.text">Text</label>
+            <label index="carousel_item.item_type.calltoaction">Aufruf zum Handeln</label>
+            <label index="carousel_item.item_type.image">Bild</label>
+            <label index="carousel_item.item_type.textandimage">Text und Bild</label>
+            <label index="carousel_item.item_type.backgroundimage">Hintergrundbild</label>
+            <label index="carousel_item.item_type.html">HTML</label>
+
+            <label index="accordion.options">Akkordeon-Optionen</label>
+            <label index="accordion.default_element">Standard-Element</label>
+
+            <label index="accordion_item">Akkordeon Element</label>
+            <label index="accordion_item.tt_content">Akkordeon</label>
+            <label index="accordion_item.header">Überschrift</label>
+            <label index="accordion_item.bodytext">Text</label>
+            <label index="accordion_item.media">Medien</label>
+            <label index="accordion_item.mediaposition">Medienposition</label>
+            <label index="accordion_item.imagecols">Spalten</label>
+            <label index="accordion_item.image_zoom">Auf Klick vergrößern</label>
+            <label index="accordion_item.mediaorient">Ausrichtung</label>
+            <label index="accordion_item.mediaorient.left">Links</label>
+            <label index="accordion_item.mediaorient.top">Oben</label>
+            <label index="accordion_item.mediaorient.right">Rechts</label>
+            <label index="accordion_item.mediaorient.bottom">Unten</label>
+
+            <label index="tab.options">Tab-Optionen</label>
+            <label index="tab.default_tab">Standard-Tab</label>
+
+            <label index="tab_item">Tab-Item</label>
+            <label index="tab_item.tt_content">Tab</label>
+            <label index="tab_item.active">Als Standard setzen</label>
+            <label index="tab_item.header">Überschrift</label>
+            <label index="tab_item.bodytext">Text</label>
+            <label index="tab_item.media">Medien</label>
+            <label index="tab_item.mediaposition">Medienposition</label>
+            <label index="tab_item.imagecols">Spalten</label>
+            <label index="tab_item.image_zoom">Auf Klick vergrößern</label>
+            <label index="tab_item.mediaorient">Ausrichtung</label>
+            <label index="tab_item.mediaorient.left">Links</label>
+            <label index="tab_item.mediaorient.top">Oben</label>
+            <label index="tab_item.mediaorient.right">Rechts</label>
+            <label index="tab_item.mediaorient.bottom">Unten</label>
+
+            <label index="timeline.options">Timeline-Optionen</label>
+            <label index="timeline.sorting">Sortierung</label>
+            <label index="timeline.sorting.asc">Aufsteigend</label>
+            <label index="timeline.sorting.desc">Absteigend</label>
+
+            <label index="timeline_item">Timeline-Eintrag</label>
+            <label index="timeline_item.tt_content">Timeline</label>
+            <label index="timeline_item.date">Datum</label>
+            <label index="timeline_item.header">Überschrift</label>
+            <label index="timeline_item.bodytext">Text</label>
+            <label index="timeline_item.icon_file">Icon Datei</label>
+            <label index="timeline_item.image">Bild</label>
+
+            <label index="icon_group_item">Icon Gruppenelement</label>
+            <label index="icon_group_item.tt_content">Icon-Gruppe</label>
+            <label index="icon_group_item.header">Überschrift</label>
+            <label index="icon_group_item.subheader">Zwischenüberschrift</label>
+            <label index="icon_group_item.bodytext">Text</label>
+            <label index="icon_group_item.link">Link</label>
+            <label index="icon_group_item.icon_file">Icon Datei</label>
+
+            <label index="field.panel_class">Panel Class</label>
+
+            <label index="external_media">Externe Medien</label>
+            <label index="field.external_media_source">Externe Medienquellen</label>
+            <label index="field.external_media_ratio">Verhältnis</label>
+
+            <label index="field.icon">Icon</label>
+            <label index="field.icon_set">Icon Set</label>
+            <label index="field.icon_file">Icon Datei</label>
+            <label index="field.icon_position">Position</label>
+            <label index="field.icon_type">Typ</label>
+            <label index="field.icon_size">Größe</label>
+            <label index="field.icon_background">Hintergrund</label>
+            <label index="field.icon_color">Farbe</label>
+            <label index="field.icon_background">Hintergrund</label>
+
+            <label index="field.background_color_class">Hintergrundfarbe</label>
+            <label index="field.background_image">Hintergrundbild</label>
+            <label index="field.background_image_options">Optionen für Hintergrundbilder</label>
+
+            <label index="field.teaser">Vorspann</label>
+            <label index="field.file_folder">Dateiordner</label>
+
+            <label index="field.imageorient.125">Neben Text, zentriert rechts</label>
+            <label index="field.imageorient.126">Neben Text, zentriert links</label>
+
+            <label index="option.background_image.parallax">Parallax</label>
+            <label index="option.background_image.parallax.description">Parallaxeffekt aktivieren</label>
+            <label index="option.background_image.fade">Verblassen</label>
+            <label index="option.background_image.fade.description">Verblassen-Effekt aktivieren</label>
+            <label index="option.background_image.filter">Filter</label>
+            <label index="option.background_image.filter.none">Keine</label>
+            <label index="option.background_image.filter.blur">Unschärfe</label>
+            <label index="option.background_image.filter.grayscale">Graustufen</label>
+            <label index="option.background_image.filter.sepia">Sepia</label>
+
+            <label index="option.default">Standard</label>
+            <label index="option.none">Keine</label>
+            <label index="option.left">Links</label>
+            <label index="option.top">Oben</label>
+            <label index="option.right">Rechts</label>
+            <label index="option.bottom">Unten</label>
+            <label index="option.default">Standard</label>
+            <label index="option.square">Quadrat</label>
+            <label index="option.circle">Kreis</label>
+            <label index="option.extrasmall">Sehr Klein</label>
+            <label index="option.small">Klein</label>
+            <label index="option.medium">Mittel</label>
+            <label index="option.large">Groß</label>
+            <label index="option.awesome">Großartig</label>
+            <label index="option.primary">Primär</label>
+            <label index="option.success">Erfolg</label>
+            <label index="option.info">Info</label>
+            <label index="option.warning">Warnung</label>
+            <label index="option.danger">Gefahr</label>
+
+            <label index="ratio.16_9">16:9</label>
+            <label index="ratio.4_3">4:3</label>
+            <label index="ratio.1_1">1:1</label>
+            <label index="ratio.free">Frei</label>
+
+            <label index="tablelayout.default">Standard</label>
+            <label index="tablelayout.basic">Einfach</label>
+            <label index="tablelayout.striped">Gestreifte Reihen</label>
+            <label index="tablelayout.bordered">Umrandete Tabelle</label>
+            <label index="tablelayout.hover">Reihen mit Maus-Hover-Effekt</label>
+            <label index="tablelayout.condensed">Gestauchte Tabelle</label>
+
+            <label index="uploadslayout.default">Standard</label>
+            <label index="uploadslayout.icons">Icons anzeigen</label>
+            <label index="uploadslayout.iconsandpreview">Icons und Vorschaubild anzeigen</label>
+
+            <label index="field.assets">Medienelemente</label>
+
+            <label index="tabs.background">Hintergrund</label>
+            <label index="tabs.icon">Icon</label>
+
+            <label index="colorpicker">Farbauswähler</label>
+
+            <label index="advanced">Fortgeschritten</label>
+            <label index="settings">Einstellungen</label>
+
+            <label index="palette.alignment">Ausrichtung</label>
+
+            <label index="field.readmore_label">Mehr lesen Label</label>
+
+        </languageKey>
+  </data>
+</T3locallangExt>

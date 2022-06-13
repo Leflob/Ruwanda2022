@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+
+            <label index="pageTs.disablePageTsRTE">Deaktivieren von RTE: Wenn diese Option gesetzt ist, wird die Konfiguration für den RTE nicht automatisch geladen. Fügen Sie "FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/RTE.tsconfig" in Ihre PageTsConfig ein, um die Konfiguration manuell zu laden.</label>
+            <label index="pageTs.disablePageTsTCEFORM">Deaktivieren von TCEFORM: Wenn diese Option gesetzt ist, wird die Konfiguration für TCEFORM nicht automatisch geladen. Fügen Sie "FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/TCEFORM.tsconfig" in Ihre PageTsConfig ein, um die Konfiguration manuell zu laden.</label>
+            <label index="pageTs.disablePageTsTCEMAIN">Deaktivieren von TCEMAIN: Wenn diese Option gesetzt ist, wird die Konfiguration von TCEMAIN nicht automatisch geladen. Fügen Sie "FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/TCEMAIN.tsconfig" in Ihre PageTsConfig ein, um die Konfiguration manuell zu laden.</label>
+            <label index="pageTs.disablePageTsBackendLayouts">Deaktivieren von BackendLayouts: Wenn diese Option aktiviert ist, werden die enthaltenen Backend-Layouts nicht automatisch geladen. Fügen Sie "FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig" in Ihre PageTsConfig ein, um die Konfiguration manuell zu laden.</label>
+            <label index="pageTs.disablePageTsContentElements">Inhaltselement PageTS-Konfiguration deaktivieren: Wenn diese Option aktiviert ist, wird die enthaltene Konfiguration für Inhaltselemente nicht automatisch geladen. Fügen Sie "FILE:EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/All.tsconfig" in Ihre PageTsConfig ein, um die Konfiguration manuell zu laden.</label>
+
+            <label index="feature.disableCssProcessing">Deaktivieren Sie die Verarbeitung von LESS/Scss-Dateien: WARNUNG: Wenn diese Option aktiviert ist, gibt es keine automatische Verarbeitung von LESS/Scss-Dateien im Frontend mehr. Sie müssen stattdessen CSS-Dateien bereitstellen oder die Verarbeitung der LESS/Scss-Dateien selbst übernehmen.</label>
+            <label index="feature.disableGoogleFontCaching">Deaktivieren Sie den lokalen Google-Font Cache: Wenn diese Option aktiviert ist, werden Google-Schriften nicht auf dem Server zwischengespeichert.</label>
+            <label index="feature.disableFontLoader">Deaktivieren Sie WebFontLoader: Wenn diese Option gesetzt ist, findet keine weitere Verarbeitung von WebFonts statt.</label>
+
+        </languageKey>
+  </data>
+</T3locallangExt>
