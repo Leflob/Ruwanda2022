@@ -39,6 +39,10 @@
         <source>Revert successful</source>
         <target state="final">Rücknahme erfolgreich</target>
       </trans-unit>
+      <trans-unit id="revert_update_success_message" resname="revert_update_success_message" approved="yes">
+        <source>All slug changes of sub pages have been reverted.</source>
+        <target state="final">Alle Slug-Änderungen von Unterseiten wurden rückgängig gemacht.</target>
+      </trans-unit>
       <trans-unit id="revert_redirects_success_title" resname="revert_redirects_success_title" approved="yes">
         <source>Revert successful</source>
         <target state="final">Rücknahme erfolgreich</target>

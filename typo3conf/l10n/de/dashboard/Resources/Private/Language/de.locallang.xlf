@@ -129,6 +129,10 @@
       <trans-unit id="widgets.t3information.description" xml:space="preserve" approved="yes">
 				<source>Some general information about TYPO3 and the version used</source>
 			<target state="final">Einige allgemeine Informationen über TYPO3 und die verwendete Version</target></trans-unit>
+      <trans-unit id="widgets.t3information.text" resname="widgets.t3information.text" approved="yes">
+        <source><![CDATA[TYPO3 CMS is an enterprise-class, Open Source Content Management System, used internationally to build and manage websites of all types, from small sites for non-profits to multilingual enterprise solutions for large corporations.<br /><br />For further information visit <a href="https://typo3.org/typo3-cms/" target="_blank" rel="noreferrer">typo3.org</a>.<br /><br />TYPO3 CMS is <b>freely available</b> under the <a href="https://typo3.org/project/licenses/" target="_blank" rel="noreferrer">TYPO3-license (GNU/GPL)</a>.<br /><br />You are using version %s - Copyright %s %s]]></source>
+        <target state="final"><![CDATA[Das TYPO3 CMS ist ein quelloffenes Business-Level Content Management System, welches weltweit für Webseiten aller Arten verwendet wird, von kleinen Websites für gemeinnützige Organisationen bis hin zu mehrsprachigen Business-Lösungen für große Konzerne. <br /><br />Weitere Informationen auf <a href="https://typo3.org/typo3-cms/" target="_blank" rel="noreferrer">typo3.org</a><br /><br />TYPO3 CMS ist <b>frei verfügbar</b> unter der <a href="https://typo3.org/typo3-cms/overview/licenses/" target="_blank" rel="noreferrer">TYPO3-Lizenz (GNU/GPL)</a>.<br /><br />Du benutzt Version %s - Copyright %s %s]]></target>
+      </trans-unit>
       <trans-unit id="widgets.t3information.logo" resname="widgets.t3information.logo" approved="yes">
         <source>TYPO3 CMS logo</source>
         <target state="final">Logo des TYPO3 CMS</target>

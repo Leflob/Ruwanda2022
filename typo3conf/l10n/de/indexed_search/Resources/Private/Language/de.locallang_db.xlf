@@ -135,6 +135,10 @@
         <source>Indexed Search</source>
         <target state="final">Indexsuche</target>
       </trans-unit>
+      <trans-unit id="plugin_description" resname="plugin_description" approved="yes">
+        <source>Search based on a database stored index.</source>
+        <target state="final">Suche auf der Grundlage eines in der Datenbank gespeicherten Index.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

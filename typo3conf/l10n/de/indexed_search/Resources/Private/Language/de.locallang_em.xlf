@@ -79,6 +79,10 @@
         <source>Use MySQL specific fulltext search - Update database schema in install tool after toggling this flag</source>
         <target state="final">Die Volltextsuche von MySQL benutzen - aktualisieren Sie die Datenbank im Install-Tool, nachdem Sie diese Option umgestellt haben</target>
       </trans-unit>
+      <trans-unit id="indexedsearch.config.deleteFromIndexAfterEditing" resname="indexedsearch.config.deleteFromIndexAfterEditing" approved="yes">
+        <source>Remove content from index if page or its content is edited</source>
+        <target state="final">Inhalt aus dem Index entfernen, wenn die Seite oder ihr Inhalt bearbeitet wird</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

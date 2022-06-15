@@ -63,9 +63,25 @@
         <source>307 Temporary Redirect</source>
         <target state="final">307 Temporary Redirect</target>
       </trans-unit>
+      <trans-unit id="sys_redirect.target_statuscode.308" resname="sys_redirect.target_statuscode.308" approved="yes">
+        <source>308 Permanent Redirect</source>
+        <target state="final">308 Permanente Weiterleitung</target>
+      </trans-unit>
+      <trans-unit id="sys_redirect.target_statuscode.keep" resname="sys_redirect.target_statuscode.keep" approved="yes">
+        <source>Keep HTTP method</source>
+        <target state="final">HTTP-Methode beibehalten</target>
+      </trans-unit>
+      <trans-unit id="sys_redirect.target_statuscode.change" resname="sys_redirect.target_statuscode.change" approved="yes">
+        <source>Change HTTP method to GET</source>
+        <target state="final">HTTP-Methode zu GET ändern</target>
+      </trans-unit>
       <trans-unit id="sys_redirect.hitcount" resname="sys_redirect.hitcount" approved="yes">
         <source>Count</source>
         <target state="final">Anzahl</target>
+      </trans-unit>
+      <trans-unit id="sys_redirect.lasthiton" resname="sys_redirect.lasthiton" approved="yes">
+        <source>Last Hit on</source>
+        <target state="final">Letzter Treffer am</target>
       </trans-unit>
       <trans-unit id="sys_redirect.hitcountState" resname="sys_redirect.hitcountState" approved="yes">
         <source>Hit Counter</source>

@@ -215,6 +215,10 @@
         <source>Name (not visible in frontend)</source>
         <target state="final">Name (in der Webseite nicht sichtbar)</target>
       </trans-unit>
+      <trans-unit id="header.description.ALT" resname="header.description.ALT" approved="yes">
+        <source>The name won't be displayed as header above the element, but will be used as reference in menus.</source>
+        <target state="final">Der Name wird nicht als Überschrift über dem Element angezeigt, sondern als Referenz in Menüs verwendet.</target>
+      </trans-unit>
       <trans-unit id="header_position" resname="header_position" approved="yes">
         <source>Align</source>
         <target state="final">Ausrichtung:</target>

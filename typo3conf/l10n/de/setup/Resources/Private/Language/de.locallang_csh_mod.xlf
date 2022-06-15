@@ -166,6 +166,14 @@ The default module is "About Modules".</source>
         <source>If you set this option you will receive an email from TYPO3 each time you (or "someone") logs in using your username. You might like to receive such a "warning" as a security measure so you will know if someone else picks up your password and uses your account.</source>
         <target state="final">Mit dieser Option können Sie festlegen, dass jede Anmeldung unter Ihrem Benutzernamen per E-Mail an Sie gemeldet wird. Mit dieser Sicherheitsmaßnahme können Sie überprüfen, ob jemand anderes in Besitz Ihres Passworts gelangt ist und Ihren Benutzernamen missbraucht.</target>
       </trans-unit>
+      <trans-unit id="option_avatar.alttitle" resname="option_avatar.alttitle" approved="yes">
+        <source>Avatar</source>
+        <target state="final">Avatar</target>
+      </trans-unit>
+      <trans-unit id="option_avatar.description" resname="option_avatar.description" approved="yes">
+        <source>You can personalize your TYPO3 user profile by adding an avatar. It will be shown at multiple places in the backend, e.g. in the topbar, next to your username.</source>
+        <target state="final">Sie können Ihr TYPO3 Benutzerprofil personalisieren, indem Sie einen Avatar hinzufügen. Es wird an mehreren Stellen im Backend angezeigt, z.B. in der Topbar neben Ihrem Benutzernamen.</target>
+      </trans-unit>
       <trans-unit id="option_newPassword.alttitle" resname="option_newPassword.alttitle" approved="yes">
         <source>Change password</source>
         <target state="final">Neues Passwort</target>
@@ -185,6 +193,22 @@ The default module is "About Modules".</source>
       <trans-unit id="option_newPasswordAgain.description" resname="option_newPasswordAgain.description" approved="yes">
         <source>Confirm the new password by entering it again, exactly like above. If the two new passwords do not match, the password will not be changed.</source>
         <target state="final">Wiederholen Sie Ihr neues Passwort. Sollten die beiden Passwörter nicht übereinstimmen, so wird Ihr Passwort nicht geändert.</target>
+      </trans-unit>
+      <trans-unit id="option_mfaProviders.alttitle" resname="option_mfaProviders.alttitle" approved="yes">
+        <source>Multi-factor authentication</source>
+        <target state="final">Multi-Factor Authentifizierung</target>
+      </trans-unit>
+      <trans-unit id="option_mfaProviders.description" resname="option_mfaProviders.description" approved="yes">
+        <source>Manage your multi-factor authentication settings. This can be used to secure your account by providing another factor next to your password.</source>
+        <target state="final">Verwalten Sie Ihre Multi-Faktor-Authentifizierungseinstellungen. Dies kann verwendet werden, um Ihr Konto zu sichern, indem Sie einen weiteren Faktor neben Ihrem Passwort angeben.</target>
+      </trans-unit>
+      <trans-unit id="option_backendTitleFormat.alttitle" resname="option_backendTitleFormat.alttitle" approved="yes">
+        <source>Format of window title in backend</source>
+        <target state="final">Format des Fenstertitels im Backend</target>
+      </trans-unit>
+      <trans-unit id="option_backendTitleFormat.description" resname="option_backendTitleFormat.description" approved="yes">
+        <source>Define the order within the TYPO3 backend window title, which is usually displayed in the browser tab. Either the site name followed by the current module name or vice versa.</source>
+        <target state="final">Definieren Sie die Reihenfolge innerhalb des TYPO3 Backend Fenstertitels, der normalerweise im Browser-Tab angezeigt wird. Entweder der Name der Seite, gefolgt vom aktuellen Modulnamen oder umgekehrt.</target>
       </trans-unit>
       <trans-unit id="reset.alttitle" resname="reset.alttitle" approved="yes">
         <source>Reset all Values to default</source>

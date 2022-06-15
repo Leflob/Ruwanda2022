@@ -610,6 +610,14 @@ Alle Suchwörter werden zu Kleinschreibung konvertiert.
         <source>Please select a page from the page tree.</source>
         <target state="final">Bitte wählen Sie eine Seite aus dem Seitenbaum aus.</target>
       </trans-unit>
+      <trans-unit id="administration.moduleFunctions.mode" resname="administration.moduleFunctions.mode" approved="yes">
+        <source>Mode</source>
+        <target state="final">Modus</target>
+      </trans-unit>
+      <trans-unit id="administration.moduleFunctions.depth" resname="administration.moduleFunctions.depth" approved="yes">
+        <source>Depth</source>
+        <target state="final">Tiefe</target>
+      </trans-unit>
       <trans-unit id="error.noTypoScript" resname="error.noTypoScript" approved="yes">
         <source>Error: Please check that TypoScript for the Indexed Search plugin is included.</source>
         <target state="final">Fehler: Bitte stellen Sie sicher, dass das TypoScript für das Indexsuche-Plug-In eingebunden ist.</target>

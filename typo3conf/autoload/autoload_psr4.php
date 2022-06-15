@@ -6,5 +6,7 @@ $typo3InstallDir = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
 
 return array(
     'BK2K\\BootstrapPackage\\' => array($typo3InstallDir . 'typo3conf/ext/bootstrap_package/Classes'),
+    'GertKaaeHansen\\GkhRssImport\\' => array($typo3InstallDir . 'typo3conf/ext/gkh_rss_import/Classes'),
+    'In2code\\Powermail\\' => array($typo3InstallDir . 'typo3conf/ext/powermail/Classes'),
     'TYPO3\\CMS\\Introduction\\' => array($typo3InstallDir . 'typo3conf/ext/introduction/Classes'),
 );

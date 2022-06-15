@@ -104,6 +104,12 @@ return [
         'introduction' => [
             'packagePath' => 'typo3conf/ext/introduction/',
         ],
+        'gkh_rss_import' => [
+            'packagePath' => 'typo3conf/ext/gkh_rss_import/',
+        ],
+        'powermail' => [
+            'packagePath' => 'typo3conf/ext/powermail/',
+        ],
     ],
     'version' => 5,
 ];

@@ -179,6 +179,22 @@
         <source>Error</source>
         <target state="final">Fehler</target>
       </trans-unit>
+      <trans-unit id="severity.info" resname="severity.info" approved="yes">
+        <source>Info</source>
+        <target state="final">Info</target>
+      </trans-unit>
+      <trans-unit id="severity.notice" resname="severity.notice" approved="yes">
+        <source>Notice</source>
+        <target state="final">Hinweis</target>
+      </trans-unit>
+      <trans-unit id="severity.warning" resname="severity.warning" approved="yes">
+        <source>Warning</source>
+        <target state="final">Warnung</target>
+      </trans-unit>
+      <trans-unit id="severity.error" resname="severity.error" approved="yes">
+        <source>Error</source>
+        <target state="final">Fehler</target>
+      </trans-unit>
       <trans-unit id="error.1446559458" resname="error.1446559458" approved="yes">
         <source>Error evaluating regular expression "%s".</source>
         <target state="final">Fehler beim Auswerten des regulären Ausdrucks "%s".</target>

@@ -63,6 +63,10 @@
         <source>Status Code</source>
         <target state="final">Statuscode</target>
       </trans-unit>
+      <trans-unit id="filter.neverHit" resname="filter.neverHit" approved="yes">
+        <source>Never hit</source>
+        <target state="final">Niemals aufgerufen</target>
+      </trans-unit>
       <trans-unit id="filter.sendButton" resname="filter.sendButton" approved="yes">
         <source>Filter</source>
         <target state="final">Filter</target>

@@ -15,6 +15,10 @@
         <source>No results found</source>
         <target state="final">Keine Ergebnisse gefunden</target>
       </trans-unit>
+      <trans-unit id="flashmessage.no_results.message" resname="flashmessage.no_results.message" approved="yes">
+        <source>This folder does not contain any files for "%s"</source>
+        <target state="final">In diesem Ordner gibt es keine Datei "%s"</target>
+      </trans-unit>
       <trans-unit id="flashmessage.no_items" resname="flashmessage.no_items" approved="yes">
         <source>This folder is empty</source>
         <target state="final">Dieser Ordner ist leer</target>

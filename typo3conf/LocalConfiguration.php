@@ -79,6 +79,15 @@ return [
             'useMysqlFulltext' => '0',
             'xlhtml' => '/usr/bin/',
         ],
+        'powermail' => [
+            'disableBackendModule' => '0',
+            'disableIpLog' => '1',
+            'disableMarketingInformation' => '0',
+            'disablePluginInformation' => '0',
+            'disablePluginInformationMailPreview' => '0',
+            'enableCaching' => '0',
+            'replaceIrreWithElementBrowser' => '0',
+        ],
     ],
     'FE' => [
         'debug' => false,

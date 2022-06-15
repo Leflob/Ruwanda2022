@@ -270,6 +270,13 @@ _MOD_web_layout:columns_single</target></trans-unit>
         <source>Enter header text for the Content Element.</source>
         <target state="final">Geben Sie eine Überschrift für das Inhaltselement ein.</target>
       </trans-unit>
+      <trans-unit id="header.details" resname="header.details" xml:space="preserve" approved="yes">
+				<source>Almost all Content Elements will display this header above the content. If you don't want the header displayed, set the header Layout to "Hidden". You can also choose not to enter any content in this field.
+
+Some content element types do not display the header by default. In those cases the Header field is typically labeled "Name" instead. One example is the HTML Content Element. The chosen name will then only be displayed in menus, e.g. the section index.</source>
+			<target state="final">Bei fast allen Inhaltselementen wird diese Kopfzeile über dem Inhalt angezeigt. Wenn Sie nicht möchten, dass die Überschrift angezeigt wird, setzen Sie das Layout der Überschrift auf "Verborgen". Sie können dieses Feld auch leer lassen.
+
+Bei einigen Inhaltselementtypen wird die Kopfzeile standardmäßig nicht angezeigt. In diesen Fällen ist das Feld Überschrift in der Regel stattdessen mit "Name" beschriftet. Ein Beispiel ist das HTML-Inhaltselement. Der gewählte Name wird dann nur in Menüs angezeigt, z. B. in der Abschnittsübersicht.</target></trans-unit>
       <trans-unit id="_header.seeAlso" resname="_header.seeAlso" xml:space="preserve" approved="yes">
 				<source>tt_content:header_position,
 tt_content:header_link,

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+			<!-- Wizard -->
+			<trans-unit id="wizard.title">
+				<target>Affiche un flux RSS</target>
+			</trans-unit>
+			<trans-unit id="wizard.description">
+				<source>Récupère un flux RSS / Atom et affiche-le.</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.tx_rssdisplay_feedUrl">
+				<target>URL du flux</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_rssdisplay_numberOfItems">
+				<target>Nombre d'items à afficher (&gt;1)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_rssdisplay_template">
+				<target>Template</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_rssdisplay_descriptionlength">
+				<target>Longueur de la description (en caractères)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.list_type_pi1">
+				<target>RSS Feed Display</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

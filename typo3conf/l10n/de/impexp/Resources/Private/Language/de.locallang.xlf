@@ -355,6 +355,10 @@
         <source>Enable logging</source>
         <target state="final">Protokollierung einschalten:</target>
       </trans-unit>
+      <trans-unit id="importdata_writeIndividualDbActions" resname="importdata_writeIndividualDbActions" approved="yes">
+        <source>Write individual database actions during import to the log</source>
+        <target state="final">Während des Imports einzelne Datenbankaktionen in das Protokoll schreiben</target>
+      </trans-unit>
       <trans-unit id="importdata_thisIsDisabledBy" resname="importdata_thisIsDisabledBy" approved="yes">
         <source>This is disabled by default since there may be hundred of entries generated.</source>
         <target state="final">Diese Option ist standardmäßig deaktiviert, weil unter Umständen hunderte Einträge erzeugt werden.</target>

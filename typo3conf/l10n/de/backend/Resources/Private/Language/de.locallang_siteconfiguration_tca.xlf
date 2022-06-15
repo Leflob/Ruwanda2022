@@ -31,6 +31,10 @@
         <source>Available Languages for this Site</source>
         <target state="final">Verfügbare Sprachen für diese Seite</target>
       </trans-unit>
+      <trans-unit id="site.languages.description" resname="site.languages.description" approved="yes">
+        <source>Select an already exisiting language form another site or create a new one.</source>
+        <target state="final">Wählen Sie eine bereits existierende Sprache von einer anderen Website oder erstellen Sie eine neue.</target>
+      </trans-unit>
       <trans-unit id="site.languages.new" resname="site.languages.new" approved="yes">
         <source>New language</source>
         <target state="final">Neue Sprache</target>
