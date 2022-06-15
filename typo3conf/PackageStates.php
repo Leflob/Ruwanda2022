@@ -104,6 +104,9 @@ return [
         'introduction' => [
             'packagePath' => 'typo3conf/ext/introduction/',
         ],
+        'fp_masterquiz' => [
+            'packagePath' => 'typo3conf/ext/fp_masterquiz/',
+        ],
         'gkh_rss_import' => [
             'packagePath' => 'typo3conf/ext/gkh_rss_import/',
         ],

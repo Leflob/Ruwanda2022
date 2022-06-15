@@ -1,0 +1,40 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+  <f:layout name="Default" />
+  <f:section name="Content">
+    <h1>{participant.name}</h1>
+    <h3><f:translate key="LLL:EXT:fp_masterquiz/Resources/Private/Language/locallang_mod1.xlf:quiz" />: {participant.quiz.name}</h3>
+    <h4><f:translate key="LLL:EXT:fp_masterquiz/Resources/Private/Language/locallang_mod1.xlf:user" />:</h4>
+    <div class="table-responsive">
+	<table class="table">
+		<tr>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.email" /></th>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.homepage" /></th>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.user" /></th>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.ip" /></th>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.points" /></th>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.maximum1" /></th>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.maximum2" /></th>
+			<th><f:translate key="tx_fpmasterquiz_domain_model_participant.time" /></th>
+		</tr>
+		<tr>
+			<td>{participant.email}</td>
+			<td>{participant.homepage}</td>
+			<td><f:if condition="{participant.user}">{participant.username} ({participant.user})</f:if></td>
+			<td>{participant.ip}</td>
+			<td>{participant.points}</td>
+			<td>{participant.maximum1}</td>
+			<td>{participant.maximum2}</td>
+			<td>
+				{f:format.date(date: participant.startdate, format: 'd.m.y')}
+				{f:format.date(date: participant.startdate, format: 'H:i:s')}
+				<f:if condition="{participant.datesNotEqual}">- {f:format.date(date: participant.tstamp, format: 'H:i:s')}</f:if>
+			</td>
+		</tr>
+	</table>
+	</div>
+    <f:render partial="Selected/Properties" arguments="{selections:participant.sortedSelections}" />
+    <p><f:link.action action="delete" arguments="{participant : participant}" class="text-danger"><f:translate key="LLL:EXT:fp_masterquiz/Resources/Private/Language/locallang_mod1.xlf:delete-user" /></f:link.action></p>
+    <br />
+    <p><f:link.action action="list" class="btn btn-default"><f:translate key="LLL:EXT:fp_masterquiz/Resources/Private/Language/locallang_mod1.xlf:back" default="Back to list" /></f:link.action></p>
+  </f:section>
+</html>

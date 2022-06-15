@@ -1,0 +1,104 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Empty" />
+
+	<f:section name="content">
+	<f:if condition="{final} == 0">
+		<f:then>
+		
+			<f:if condition="{showAnswers}">
+				<f:then>
+				
+					<!--  show answers after submit -->
+					<f:for each="{participant.selections}" as="selection" iteration="pageiterator">
+						<f:if condition="{pageiterator.cycle} >= {from}">
+							<f:if condition="{pageiterator.cycle} <= {to}">
+								<f:render partial="Question/PropertiesSent" arguments="{_all}" />
+							</f:if>
+						</f:if>
+					</f:for>
+					<script>
+					quizanswers = 1;
+					</script>
+					
+				</f:then>
+				<f:else>
+				
+					<!-- show questions -->
+					<f:for each="{quiz.questions}" as="question" iteration="pageiterator">
+						<f:if condition="{pageiterator.cycle} >= {from}">
+							<f:if condition="{pageiterator.cycle} <= {to}">
+								<f:render partial="Question/Properties" arguments="{_all}" />
+							</f:if>
+						</f:if>
+					</f:for>
+					<script>
+					quizanswers = 0;
+					</script>
+					
+					<f:if condition="{settings.joker}"><f:if condition="{useJoker} != 1">
+						<div class="quiz-joker">
+							<f:form.button type="button" name="quizGetJoker" id="quiz-GetJoker" class="btn btn-secondary" onclick="getQuizJoker();"
+								title="{f:translate(key: 'text.joker.title')}">{f:translate(key: 'text.joker.button')}</f:form.button><br><br>
+						</div>
+					</f:if></f:if>
+					
+				</f:else>
+			</f:if>
+			
+			<script>
+			quizfinal = 0;
+			thisPage = {page};
+			$('#quiz-form'+ceuid+' #quiz-form-parti').val('{participant.uid}');
+			$('#quiz-form'+ceuid+' #quiz-form-page').val('{nextPage}');
+			$('#quiz-form'+ceuid+' #quiz-form-answers').val('{showAnswersNext}');
+			$('#quiz-form'+ceuid+' #quiz-form-joker').val('{nextJoker}');
+			if ({settings.debug} == 1) {
+				console.log('puid: '+$('#quiz-form'+ceuid+' #quiz-form-parti').val()+
+					'; next-page: '+$('#quiz-form'+ceuid+' #quiz-form-page').val()+
+					'; show answers: '+$('#quiz-form'+ceuid+' #quiz-form-answers').val());
+			}
+			</script>
+			
+		</f:then>
+		<f:else>
+		
+			<f:render partial="Quiz/FinalPage" arguments="{_all}" />
+
+			<script>
+				var tmpTimePeriod = parseInt('{quiz.timeperiod}');
+				if (tmpTimePeriod > 0) {
+					clearInterval(quizIntervalId);
+					$('#quiz-time-counter').hide();
+				}
+				quizanswers = 0;
+				quizfinal = 1;
+				$('#quiz-form-page').val('1000');
+
+				$( "#quiz-restart" ).click(function(ev) {
+					ev.preventDefault();
+					$('#quiz-form-parti').val('0');
+					$('#quiz-form-page').val('1');
+					$('#quiz-form-answers').val('0');
+					quizfinal = 0;
+					$('#quiz-GoOn').val(text_goon);
+					$('#quiz-button-wrap').show();
+					if (tmpTimePeriod > 0) {
+						quizTimeCount = quizTimePeriod;
+						$('#quiz-form-time').val((Date.now() / 1000 | 0));
+						$('#quiz-time-alert').removeClass('alert-warning');
+						$('#quiz-time-alert').removeClass('alert-danger');
+						$('#quiz-time-alert').addClass('alert-info');
+						$('#quiz-time-counter').show();
+						setQuizCounter();
+					}
+					$('#quiz-form'+ceuid).submit();
+				});
+			</script>
+			
+		</f:else>
+	</f:if>
+	<f:if condition="{settings.debug}">
+		<pre>{debug}</pre>
+	</f:if>
+	</f:section>
+</html>

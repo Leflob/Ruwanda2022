@@ -1,0 +1,148 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:variable name="enablePoints">{selection.maximumPoints}</f:variable> 
+<div class="card"><div class="card-body">
+	<f:if condition="({settings.showPageNo} == 1) && ({settings.ajax} == 1) && ({pages} != 1) && ({final} == 0)">
+	  <p class="quiz-progress">{f:translate(key: "text.page")} <span>{page}</span> {f:translate(key: "text.of")} {pages} ({pagePercent}%)</p>
+	</f:if>
+	<f:if condition="({settings.showQuestionNo} == 1)">
+	  <p class="quiz-question-no">{f:translate(key: "text.question")} 
+		<span id="quiz-questno"><f:if condition="({settings.ajax} == 1) || {isEmail}"><f:then>{pageiterator.cycle}</f:then><f:else>
+			<f:if condition="{final} == 0"><f:then>{pageiterator.cycle + pageBasis}</f:then><f:else>{pageiterator.cycle}</f:else></f:if></f:else></f:if></span>
+		{f:translate(key: "text.of")} {questions}</p>
+	</f:if>
+	{settings.template.wrapQuestionTitle1 -> f:format.raw()}{selection.question.title}{settings.template.wrapQuestionTitle2 -> f:format.raw()}
+	{settings.template.wrapQuestionDesc1 -> f:format.raw()}<f:format.html>{selection.question.bodytext}</f:format.html>{settings.template.wrapQuestionDesc2 -> f:format.raw()}
+	<div class="row">
+		<div class="{f:if(condition: '{selection.question.image.uid}', then: settings.template.colText, else: settings.template.col12)}">
+			<div class="text-buttons">
+				<f:if condition="{selection.question.qmode} != 6">
+					<f:if condition="(({settings.showOwnAnswers} == 2) && ({final} == 0)) || ({settings.showOwnAnswers} == 1) || {isEmail}">
+						<f:comment> Eigene Antworten anzeigen </f:comment>
+						<f:if condition="({selection.question.qmode} == 3) || ({selection.question.qmode} == 5)">
+						<f:then>
+							<f:if condition="{selection.entered}">
+								<p>{f:translate(key: "text.yourTextAnswer", default: 'Given text-answer:')}</p>													
+							</f:if>
+						</f:then>
+						<f:else>
+							<p>{f:translate(key: "text.yourAnswers", default: 'Given answers:')}</p>						
+						</f:else>
+						</f:if>
+						<f:for each="{selection.answers}" as="answer" iteration="nr">
+							<f:comment> {selection.question -> f:debug(title: 'Members of selection.question')} </f:comment> 
+							<f:comment> {selection -> f:debug(title: 'Members of selection')} </f:comment> 
+							<f:switch expression="{selection.question.qmode}">
+							<f:case value="3">
+								<f:comment>When 'Enter an answer' in a text field</f:comment> 
+								<f:comment> {answer -> f:debug(title: 'Members of answer')} / no HTML for entered Text allowed:	</f:comment>
+								<ul><li>{selection.entered -> f:format.nl2br()}</li></ul>
+							</f:case>									
+							<f:case value="5">
+								<f:comment>When 'Enter an answer' in a textarea</f:comment>
+								<ul><li>{selection.entered -> f:format.nl2br()}</li></ul>
+							</f:case>
+							<f:case value="7">
+								<f:comment>Star rating</f:comment>
+								<div class="star-cb-rating">
+									<f:for each="{selection.question.answers}" as="answer7" iteration="nr7">
+							    		<f:if condition="{nr7.cycle} <= {selection.points}"><f:then>
+							    			<span class="dstar">★</span>
+							    		</f:then><f:else>
+							    			<span class="lstar">☆</span>
+							    		</f:else></f:if>
+							    	</f:for>
+							    </div>
+							</f:case>
+							<f:defaultCase>
+								<f:if condition="{nr.isFirst}"><ul class="quiz-showOwnAnswers"></f:if>
+								<li>
+								<f:if condition="{settings.allowHtml} == 1">
+									<f:then>{answer.title -> f:format.raw()}</f:then>
+									<f:else>{answer.title -> f:format.nl2br()}</f:else>
+								</f:if>
+								<f:if condition="{settings.showPoints} && {enablePoints}">
+                                    ({answer.points} {f:translate(key: "text.points", default: 'P')})
+                                </f:if>
+								</li>
+								<f:if condition="{nr.isLast}"></ul></f:if>
+							</f:defaultCase>
+							</f:switch>
+						</f:for>
+					</f:if>
+				
+					<f:if condition="((({settings.showCorrectAnswers} == 2) && ({final} == 0)) || ({settings.showCorrectAnswers} == 1)) && ({enablePoints} > 0)">
+						<f:comment> Nur die richtigen Antworten bei einem Quiz anzeigen </f:comment>
+						<p>{f:translate(key: "text.correctAnswers", default: 'Correct answers:')}</p>
+						<ul class="quiz-showCorrectAnswers">
+						<f:for each="{selection.question.answers}" as="answer2" iteration="nr2">
+						<f:if condition="{answer2.points} > 0">
+							<li>
+								<f:if condition="{settings.allowHtml} == 1">
+                                    <f:then>{answer2.title -> f:format.raw()}</f:then>
+                                    <f:else>{answer2.title -> f:format.nl2br()}</f:else>
+                                </f:if>
+								<f:comment> Don't show the points directly after the answer for Textbox answers </f:comment>
+								<f:if condition="({selection.question.qmode} != 3) && ({selection.question.qmode} != 5) && ({settings.showPoints} > 0)">
+                                    ({answer2.points} {f:translate(key: "text.points", default: 'P')})
+								</f:if>
+							</li>
+						</f:if>
+						</f:for>
+						</ul>
+					</f:if>
+				
+					<f:if condition="(({settings.showEveryAnswer} == 2) && ({final} == 0)) || ({settings.showEveryAnswer} == 1)">
+						<f:comment> Alle Antworten bei einer Frage und dann nur die beantworteten Fragen anzeigen </f:comment>
+						<ul class="quiz-showEveryAnswer">
+							<f:for each="{selection.question.answers}" as="answer5" iteration="nr5">
+								<f:spaceless><li class="<f:for each="{selection.answers}" as="answer6" iteration="nr6">
+										<f:if condition="({answer5.points} > 0) && ({answer5.uid} == {answer6.uid})">
+										<f:then>text-success font-weight-bold</f:then>
+										<f:else if="{answer5.points} > 0">text-success</f:else>
+										<f:else if="{answer5.uid} == {answer6.uid}">text-danger font-weight-bold</f:else>
+										<f:else></f:else>
+										</f:if>
+									</f:for>">
+									<f:if condition="{settings.allowHtml} == 1">
+										<f:then>{answer5.title -> f:format.raw()}</f:then>
+										<f:else>{answer5.title -> f:format.nl2br()}</f:else>
+									</f:if>
+									<f:if condition="{settings.showPoints} && {enablePoints}"> ({answer5.points} {f:translate(key: "text.points", default: 'P')})</f:if>
+								</li></f:spaceless> 
+							</f:for>
+						</ul>
+					</f:if>
+				
+					<f:if condition="({settings.showAllAnswers} == 1) && ({final} == 1)">
+						<f:comment> Alle Fragen am Schluss anzeigen </f:comment>
+						<p>{f:translate(key: "text.allAnswers", default: 'All answers:')}</p>
+						<f:if condition="{settings.templateLayout} == 1">
+						<f:then>
+							<f:render partial="Question/Chart" arguments="{settings:settings, question:selection.question}" />
+						</f:then>
+						<f:else>
+							<f:render partial="Question/Result" arguments="{settings:settings, question:selection.question}" />
+						</f:else>
+						</f:if>
+					</f:if>
+					
+					<f:if condition="{settings.showPoints} && {enablePoints}">
+						<p>{f:translate(key: "text.pointsQuestion", default: 'Points: ')} {selection.points}/{selection.maximumPoints}.</p>
+					</f:if>
+				</f:if>
+			</div>
+		</div>
+		<f:if condition="{selection.question.image.uid}">
+			<div class="{settings.template.colImage}">
+				<f:image src="{selection.question.image.uid}" treatIdAsReference="1" class="img-fluid" />
+			</div>
+		</f:if>
+	</div>
+	<f:if condition="{selection.question.explanation}">
+		<br />
+		<p>{f:translate(key: "text.explanation", default: 'Explanation: ')}</p>
+		<f:format.html>{selection.question.explanation}</f:format.html>
+	</f:if>
+</div></div>
+<br />
+</html>

@@ -6,22 +6,22 @@
                 <div class="frame-group-inner">
                     <div class="frame-container">
                         <div class="frame-inner">
-                            <f:if condition="{theme.meta.disable}">
+                            <f:if condition="{theme.meta.enable}">
                                 <div class="footer-meta">
                                     <f:render partial="Navigation/Meta" arguments="{_all}" />
                                 </div>
                             </f:if>
-                            <f:if condition="{theme.language.disable}">
+                            <f:if condition="{theme.language.enable}">
                                 <div class="footer-language">
                                     <f:render partial="Navigation/Language" arguments="{_all}" />
                                 </div>
                             </f:if>
-                            <f:if condition="{theme.copyright.diable}">
+                            <f:if condition="{theme.copyright.enable}">
                                 <div class="footer-copyright">
                                     <f:render partial="Structure/Copyright" arguments="{_all}" />
                                 </div>
                             </f:if>
-                            <f:if condition="{theme.socialmedia.disable}">
+                            <f:if condition="{theme.socialmedia.enable}">
                                 <div class="footer-sociallinks">
                                     <f:render partial="Structure/SocialLinks" arguments="{_all}" />
                                 </div>

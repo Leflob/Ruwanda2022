@@ -1,0 +1,23 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<h4>{question.title}</h4>
+<p>
+  <f:translate key="LLL:EXT:fp_masterquiz/Resources/Private/Language/locallang_mod1.xlf:votes" />: {question.allAnswers}
+  <f:if condition="({question.qmode} == 0) || ({question.qmode} == 4)"> / {question.totalAnswers}</f:if>
+</p>
+
+<ul class="chart">
+<f:for each="{question.answers}" as="answer3" iteration="iter3">
+  <li>
+    <span style="height:{answer3.allPercent}%" title="{answer3.title}: {answer3.allAnswers}x ({answer3.allPercent}%)"></span>
+  </li>
+</f:for>
+</ul>
+<f:if condition="({question.qmode} == 3) || ({question.qmode} == 5)">
+  <ul>
+  <f:for each="{question.textAnswers}" key="textAnswer" as="textCount">
+    <li>{textAnswer}: {textCount.sum}x ({textCount.percent}%)
+  </f:for>
+  </ul>
+</f:if>
+<hr />
+</html>

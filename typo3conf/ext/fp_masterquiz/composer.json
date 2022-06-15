@@ -1,0 +1,39 @@
+{
+	"name" : "fixpunkt/fp-masterquiz",
+	"type" : "typo3-cms-extension",
+	"description" : "A modern extension that offers quiz, polls and tests. The result can be displayed as a chart. Supports 7 question modes.",
+	"authors" : [{
+			"name" : "Kurt Gusbeth",
+			"role" : "Developer"
+		}
+	],
+	"require" : {
+		"typo3/cms-core" : "~10.4.6 || ~11.5.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Fixpunkt\\FpMasterquiz\\" : "Classes"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Fixpunkt\\FpMasterquiz\\Tests\\" : "Tests"
+		}
+	},
+	"replace" : {
+		"typo3-ter/fp-masterquiz" : "self.version"
+	},
+	"homepage" : "https://github.com/bihor/fp_masterquiz",
+	"support" : {
+		"email" : "info@quizpalme.de"
+	},
+	"license" : "GPL-3.0-or-later",
+	"keywords" : [
+		"quiz poll myquizpoll"
+	],
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "fp_masterquiz"
+		}
+	}
+}

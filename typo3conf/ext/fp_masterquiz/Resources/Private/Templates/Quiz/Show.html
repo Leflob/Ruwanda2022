@@ -1,0 +1,369 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+ 
+	<f:section name="content">
+		<f:flashMessages />
+		<f:form.validationResults>
+		  <f:if condition="{validationResults.flattenedErrors}">
+		    <ul class="errors">
+		      <f:for each="{validationResults.flattenedErrors}" as="errors" key="propertyPath">
+		        <li>{propertyPath}
+		          <ul>
+		          <f:for each="{errors}" as="error">
+		            <li>{error.code}: {error}</li>
+		          </f:for>
+		          </ul>
+		        </li>
+		      </f:for>
+		    </ul>
+		  </f:if>
+		</f:form.validationResults>
+		<f:if condition="{settings.includeRatingCSS}">
+			<f:asset.css identifier="fpMasterQuizRatingStar" href="EXT:fp_masterquiz/Resources/Public/Css/RatingStar.css" />
+		</f:if>
+		<f:if condition="{settings.templateLayout} == 1">
+			<!-- charts-layout -->
+			<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+			<script>
+				var charttype = '{settings.chart.type}';
+				var chartwidth = parseInt({settings.chart.width});
+			</script>
+		</f:if>
+		
+		{settings.template.wrapQuizTitle1 -> f:format.raw()}{quiz.name}{settings.template.wrapQuizTitle2 -> f:format.raw()}
+		<f:if condition="{quiz.media.0}">
+			<f:media file="{quiz.media.0}" alt="{quiz.media.0.originalResource.name}" title="{quiz.media.0.originalResource.title}" class="img-fluid" />
+		</f:if>
+		<f:if condition="{quiz.about}">{settings.template.wrapQuizDesc1 -> f:format.raw()}{quiz.about}{settings.template.wrapQuizDesc2 -> f:format.raw()}</f:if>
+
+		<f:if condition="{quiz.timeperiod} && ({final} == 0)">
+			<script>
+				var quizTimePassed = parseInt({participant.timePassed});
+				var quizTimePeriod = parseInt('{quiz.timeperiod}');
+				var quizTimeCount = quizTimePeriod - quizTimePassed;
+			</script>
+			<div class="text-right" id="quiz-time-counter"><div class="alert alert-info" id="quiz-time-alert" role="alert" style="display:inline-block;">
+				{f:translate(key: "text.remainingTime")}
+				<span id="quiz-time-left">{quiz.timeperiod}</span>
+			</div></div>
+		</f:if>
+
+		<script>
+			var ceuid = '{uidOfCE}';
+			var quizfinal = 0;
+			var quizend = false;
+			var noFormCheck = (({settings.noFormCheck} == 1) ? true : false);
+			var ajaxVersion = false;
+			var quizIntervalId = null;
+			var text_errorTimeUp = '{f:translate(key: "text.expiredTime")}';
+		</script>
+
+		<f:if condition="{settings.ajax} == 1">
+		<f:then>
+			<f:comment> This part is used only, if AJAX is enabled! </f:comment>
+			<f:form id="quiz-form{uidOfCE}" method="POST" argumentsToBeExcludedFromQueryString="{0: 'cHash'}">
+				<input type="hidden" name="type" value="{settings.typeNum}" id="quiz-form-type">
+	            <input type="hidden" name="L" value="{sysLanguageUid}">
+	            <input type="hidden" name="id" value="{uidOfPage}">
+				<f:form.hidden name="action" value="showAjax" />
+				<f:form.hidden name="quiz" value="{quiz.uid}" />
+				<f:form.hidden name="uidOfCE" value="{uidOfCE}" />
+				<f:form.hidden name="startTime" value="{startTime}" id="quiz-form-time" />
+				<f:form.hidden name="participant" value="0" id="quiz-form-parti" />
+				<f:form.hidden name="currentPage" value="1" id="quiz-form-page" />
+				<f:form.hidden name="showAnswers" value="0" id="quiz-form-answers" />
+				<f:form.hidden name="useJoker" value="0" id="quiz-form-joker" />
+	            
+	            <script>
+					ajaxVersion = true;
+					var quizanswers = 0;
+					var ajaxType = 'POST';
+					var ajaxTypeSetting = '{settings.ajaxType}';
+					var thisPage = {page};
+					var maxPages = {pages};
+					var showQuizAnswers = '{settings.showAnswerPage}';
+		            var text_goon = '{f:translate(key: "text.goon")}';
+		            var text_gofinal = '{f:translate(key: "text.gofinal")}';
+		        </script>
+		        <script type="text/javascript">
+		            if (ajaxTypeSetting == 'GET') {	ajaxType = 'GET'; }
+				</script>
+				
+				<div id="quiz-ajaxCallResult"></div>
+				
+				<f:if condition="{settings.user.askForData} == 1">
+					<f:render partial="Participant/Form" arguments="{_all}" />
+				</f:if>
+				<f:if condition="{settings.user.askForData} == 2">
+					<f:form.hidden name="name" value="{name}" />
+					<f:form.hidden name="email" value="{email}" />
+					<f:form.hidden name="homepage" value="{homepage}" />
+				</f:if>
+
+				<div id="quiz-error-msg" style="display:none;">
+					<div class="alert alert-danger" role="alert">
+						{f:translate(key: "text.errorEmpty")}
+					</div>
+				</div>
+				<div id="quiz-button-wrap">
+					<div class="pull-right quiz-subm">
+						<f:form.submit value="{f:translate(key: 'text.goon')}" class="btn btn-primary btn-lg" name="quizGoOn" id="quiz-GoOn" />
+					</div>
+				</div>
+				
+				<script>
+					<f:render partial="Quiz/CheckForm" arguments="{uidOfCE: uidOfCE}" />
+					
+					document.addEventListener('DOMContentLoaded', function(){
+			            var form = $('#quiz-form'+ceuid);
+			            var resultContainer = $('#quiz-ajaxCallResult');
+			            var service = {
+			                ajaxCall: function (data) {
+			                    $.ajax({
+			                        url: '/index.php',
+			                        cache: false,
+			                        type: ajaxType,
+			                        data: data.serialize(),
+			                        success: function (result) {
+			                        	// display the AJAX-result and set the JS-variable quizfinal
+			                            resultContainer.html(result).show();
+			                            <f:render partial="Quiz/CheckFields" arguments="{uidOfCE: uidOfCE}" />
+				                       	var thisQuizPage = $('#quiz-form-page').val();
+				                       	if ($('#quiz-userData').length) {
+					                       	if ((thisQuizPage > 1) || (quizanswers == 1)) {
+					                       		$('#quiz-userData').hide();
+					                       	} else {
+					                       		if ($('#quiz-user-name').length) $('#quiz-user-name').val('');
+					                       		if ($('#quiz-user-email').length) $('#quiz-user-email').val('');
+					                       		if ($('#quiz-user-homepage').length) $('#quiz-user-homepage').val('');
+					                       		$('#quiz-userData').show();
+					                       	}
+				                        }
+			                            if (thisQuizPage > maxPages) {
+			                            	if (showQuizAnswers == '0' || quizanswers == 1) {
+				                            	$('#quiz-GoOn').val(text_gofinal);
+			                            	}
+			                            	if (quizfinal == 1) {
+			                            		$('#quiz-button-wrap').hide();
+			                            	}
+			                            }
+			                        },
+			                        error: function (jqXHR, textStatus, errorThrow) {
+			                            resultContainer.html('Ajax request - ' + textStatus + ': ' + errorThrow + ' ('+data.serialize()+')').fadeIn('fast');
+			                        }
+			                    });
+			                }
+			            };
+			            form.submit(function (ev) {
+			                ev.preventDefault();
+			                var allSelected = checkQuizForm();
+							if (quizend || noFormCheck || allSelected || ($('#quiz-form'+ceuid+' #quiz-form-joker').val() == '1')) {
+								service.ajaxCall($(this));
+							} else {
+								$('#quiz-error-msg').removeAttr("style");
+								setTimeout(function() {
+									$('#quiz-error-msg').hide();
+								}, 5000);
+							}
+			            });
+			            service.ajaxCall(form);
+					}, false);
+					
+					function getQuizJoker() {
+						$('#quiz-form'+ceuid+' #quiz-form-page').val(thisPage);
+						$('#quiz-form'+ceuid+' #quiz-form-answers').val('0');
+						$('#quiz-form'+ceuid+' #quiz-form-joker').val('1');
+						$('#quiz-form'+ceuid).submit();
+					}
+			    </script>
+		    </f:form>
+			<f:if condition="{settings.resultPageUid}">
+				<br />
+				<f:link.action controller="Quiz" action="result" pageUid="{settings.resultPageUid}" arguments="{quiz:quiz}"
+					class="btn btn-info">{f:translate(key: "text.showResultPage")}</f:link.action>
+			</f:if>
+		</f:then>
+		<f:else>
+			<f:comment> This part is used in normal case! </f:comment>
+			<f:form action="show" id="quiz-form{uidOfCE}" method="POST">
+				<f:form.hidden name="quiz" value="{quiz.uid}" />
+				<f:form.hidden name="participant" value="{participant.uid}" />
+				<f:form.hidden name="currentPage" value="{nextPage}" id="quiz-form-page" />
+				<f:form.hidden name="showAnswers" value="{showAnswersNext}" />
+				<f:form.hidden name="session" value="{session}" />
+				<f:form.hidden name="startTime" value="{startTime}" />
+				
+				<f:if condition="{final} == 0">
+					<f:then>
+						<f:if condition="({settings.showPageNo} == 1) && ({pages} != 1)">
+							<p class="quiz-progress">{f:translate(key: "text.page")} <span>{page}</span>
+								{f:translate(key: "text.of")} {pages}
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped" style="width: {pagePercent}%" role="progressbar" aria-valuenow="{pagePercent}" aria-valuemin="0" aria-valuemax="100">
+										{pagePercent}%
+									</div>
+								</div>
+							</p>
+						</f:if>
+						
+						<f:if condition="{showAnswers}">
+							<f:then>
+							
+								<!--  show answers after submit -->
+								<f:for each="{participantPaginator.paginatedItems}" as="selection" iteration="pageiterator">
+									<f:render partial="Question/PropertiesSent" arguments="{_all}" />
+								</f:for>
+
+								<f:if condition="{settings.showPoints} && ({participant.maximum1} > 0)">
+									<f:comment> {participant -> f:debug(title: 'Members of participant')} </f:comment> 
+									<p>{f:translate(key: "text.pointsYet")} {participant.points}/{participant.maximum1}.</p>
+								</f:if>
+				
+								<div>
+									<div class="pull-right quiz-subm">
+										<f:form.button type="submit" name="quizGoOn" class="btn btn-primary btn-lg">
+											<f:if condition="{pages} == {page}">
+											<f:then>
+												{f:translate(key: "text.gofinal")}
+											</f:then>
+											<f:else>
+												{f:translate(key: "text.goon")}
+											</f:else>
+											</f:if>
+										</f:form.button>
+									</div>
+								</div>
+								
+							</f:then>
+							<f:else>
+						
+								<!-- show questions -->
+								<f:for each="{quizPaginator.paginatedItems}" as="question" iteration="pageiterator">
+									<f:render partial="Question/Properties" arguments="{_all}" />
+								</f:for>
+
+								<f:if condition="({settings.user.askForData} == 1) && ({page} == 1)">
+									<f:render partial="Participant/Form" arguments="{_all}" />
+								</f:if>
+								<f:if condition="({settings.user.askForData} == 2) && ({page} == 1)">
+									<f:form.hidden name="name" value="{name}" />
+									<f:form.hidden name="email" value="{email}" />
+									<f:form.hidden name="homepage" value="{homepage}" />
+								</f:if>
+
+								<div id="quiz-error-msg" style="display:none;">
+									<div class="alert alert-danger" role="alert">
+										{f:translate(key: "text.errorEmpty")}
+									</div>
+								</div>
+								<div>
+									<div class="pull-right quiz-subm">
+										<f:form.button type="button" name="quizGoOn" id="quiz-GoOn" class="btn btn-primary btn-lg">
+											<f:if condition="{pages} == {page}">
+											<f:then>
+												<f:if condition="{settings.showAnswerPage} == 1"><f:then>
+													{f:translate(key: "text.goon")}
+												</f:then><f:else>
+													{f:translate(key: "text.gofinal")}
+												</f:else></f:if>
+											</f:then>
+											<f:else>
+												{f:translate(key: "text.goon")}
+											</f:else>
+											</f:if>
+										</f:form.button>
+									</div>
+								</div>
+						
+								<script>
+									<f:render partial="Quiz/CheckForm" arguments="{uidOfCE: uidOfCE}" />
+									document.addEventListener('DOMContentLoaded', function(){
+                                        <f:render partial="Quiz/CheckFields" arguments="{uidOfCE: uidOfCE}" />
+
+                                        $( "#quiz-GoOn" ).click(function() {
+                                            // check if there are selected answers to all questions. if not, show an warning
+                                            var allSelected = checkQuizForm();
+                                            if (noFormCheck || allSelected) {
+                                                $('#quiz-form'+ceuid).submit();
+                                            } else {
+                                                $('#quiz-error-msg').removeAttr("style");
+												setTimeout(function() {
+													$('#quiz-error-msg').hide();
+												}, 5000);
+                                            }
+                                        });
+									}, false);
+								</script>
+							</f:else>
+						</f:if>
+
+						<f:if condition="{settings.resultPageUid}">
+							<br />
+							<f:link.action controller="Quiz" action="result" pageUid="{settings.resultPageUid}" arguments="{quiz:quiz}"
+								class="btn btn-info">{f:translate(key: "text.showResultPage")}</f:link.action>
+						</f:if>
+						<f:if condition="{settings.highscorePageUid}">
+							<f:link.action controller="Quiz" action="highscore" pageUid="{settings.highscorePageUid}" arguments="{quiz:quiz}"
+										   class="btn btn-info">{f:translate(key: "text.showHighscorePage")}</f:link.action>
+						</f:if>
+
+						<f:if condition="{showAnswers}"><f:then></f:then><f:else>
+							<f:if condition="{settings.template.optionalMark}">
+								<br><p>{settings.template.optionalMark -> f:format.raw()}{f:translate(key: "text.optional")}</p>
+							</f:if>
+						</f:else></f:if>
+					</f:then>
+					<f:else>
+
+						<f:render partial="Quiz/FinalPage" arguments="{_all}" />
+						
+					</f:else>
+				</f:if>
+			</f:form>
+		</f:else>
+		</f:if>
+
+		<f:if condition="{quiz.timeperiod} && ({final} == 0)">
+			<script>
+				<f:render partial="Quiz/ShowTime" />
+
+				function setQuizCounter() {
+					if (quizTimeCount > 0) {
+						quizIntervalId = window.setInterval(function () {
+							quizTimeCount--;
+							$('#quiz-time-left').html(secondsTimeSpanToHMS(quizTimeCount));
+							if (quizTimeCount <= 10) {
+								$('#quiz-time-alert').removeClass('alert-warning');
+								$('#quiz-time-alert').addClass('alert-danger');
+							} else if (quizTimeCount <= 60) {
+								$('#quiz-time-alert').removeClass('alert-info');
+								$('#quiz-time-alert').addClass('alert-warning');
+							}
+							if (quizTimeCount == 0) {
+								clearInterval(quizIntervalId);
+								window.alert(text_errorTimeUp);
+								quizend = true;
+								$('#quiz-form' + ceuid).submit();
+							}
+						}, 1000);
+					} else if (quizTimeCount < 0) {
+						$('#quiz-time-left').html('--');
+						$('#quiz-GoOn').prop("disabled",true);
+					}
+				}
+
+				document.addEventListener('DOMContentLoaded', function(){
+					$('#quiz-time-left').html(secondsTimeSpanToHMS(quizTimeCount));
+					setQuizCounter();
+				});
+			</script>
+		</f:if>
+
+		<f:if condition="{settings.debug}">
+			<pre>{debug}</pre>
+		</f:if>
+	</f:section>
+	<f:comment>
+	f:if(condition: '{pages} == {page}', then: 'Zur Auswertung', else: 'weiter')
+	</f:comment>
+</html>

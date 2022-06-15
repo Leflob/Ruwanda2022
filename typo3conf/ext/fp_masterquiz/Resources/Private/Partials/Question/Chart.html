@@ -1,0 +1,78 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="pollChart{question.uid}" class="apexchart apex-{settings.chart.type}"></div>
+<script>
+{
+  // Infos here: https://apexcharts.com/
+  <f:if condition="{settings.chart.type} == 'pie' || {settings.chart.type} == 'donut'"><f:then>
+	let chartoptions = {
+		//title: {
+		//	text: '{question.title}',
+		//	align: 'left'
+		//},
+           chart: {
+               width:	chartwidth,
+               type:	charttype,
+           },
+           plotOptions: {
+       	    pie: {
+       	      donut: {
+       	        labels: {
+       	          show: ((charttype == 'donut') ? true : false),
+       	          total: {
+       	        	  show: true,
+       	        	  label: 'Total:'
+       	          }
+       	        }
+       	      }
+       	    }
+           },
+           labels: [<f:for each="{question.answers}" as="answer3" iteration="iter3">'{answer3.titleJS -> f:format.raw()}'<f:if condition="{iter3.isLast}"><f:then></f:then><f:else>,</f:else></f:if></f:for>],
+           series: [<f:for each="{question.answers}" as="answer3" iteration="iter3">{answer3.allAnswers}<f:if condition="{iter3.isLast}"><f:then></f:then><f:else>,</f:else></f:if></f:for>],
+           theme: {
+               monochrome: {
+                   enabled: false
+               }
+           },
+           responsive: [{
+               breakpoint: 640,
+               options: {
+                   chart: {
+                       width: 320
+                   },
+                   legend: {
+                       position: 'bottom'
+                   }
+               }
+           }]
+	}
+  </f:then><f:else>
+	let chartoptions = {
+         chart: {
+             width:	chartwidth,
+             type:	charttype,
+         },
+         plotOptions: {
+             bar: {
+                 horizontal: true,
+             }
+         },
+         dataLabels: {
+             enabled: false
+         },
+         xaxis: {
+        	 categories: [<f:for each="{question.answers}" as="answer3" iteration="iter3">'{answer3.titleJS -> f:format.raw()}'<f:if condition="{iter3.isLast}"><f:then></f:then><f:else>,</f:else></f:if></f:for>],
+         },
+         series: [{
+        	 data: [<f:for each="{question.answers}" as="answer3" iteration="iter3">{answer3.allAnswers}<f:if condition="{iter3.isLast}"><f:then></f:then><f:else>,</f:else></f:if></f:for>]
+         }]
+	}
+  </f:else></f:if>
+	
+	var chart{question.uid} = new ApexCharts(
+	    document.querySelector("#pollChart{question.uid}"),
+	    chartoptions
+	);
+	chart{question.uid}.render();
+}
+</script>
+</html>
