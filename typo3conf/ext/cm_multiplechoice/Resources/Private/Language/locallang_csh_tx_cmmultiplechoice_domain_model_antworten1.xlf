@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:cm_multiplechoice/Resources/Private/Language/locallang_csh_tx_cmmultiplechoice_domain_model_antworten1.xlf" date="2022-06-22T10:52:23Z" product-name="cm_multiplechoice">
+		<header/>
+		<body>
+			<trans-unit id="antwort_text.description" resname="antwort_text.description">
+				<source>antwortText</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

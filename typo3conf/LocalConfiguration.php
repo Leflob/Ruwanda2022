@@ -53,6 +53,11 @@ return [
             'disablePageTsTCEFORM' => '0',
             'disablePageTsTCEMAIN' => '0',
         ],
+        'extension_builder' => [
+            'backupDir' => 'var/tx_extensionbuilder/backups',
+            'backupExtension' => '1',
+            'enableRoundtrip' => '1',
+        ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
@@ -79,6 +84,21 @@ return [
             'useMysqlFulltext' => '0',
             'xlhtml' => '/usr/bin/',
         ],
+        'ke_search' => [
+            'allowEmptySearch' => '1',
+            'enableExplicitAnd' => '0',
+            'enablePartSearch' => '1',
+            'finishNotification' => '0',
+            'loglevel' => 'ERROR',
+            'multiplyValueToTitle' => '1',
+            'notificationRecipient' => '',
+            'notificationSender' => 'no_reply@domain.com',
+            'notificationSubject' => '[KE_SEARCH INDEXER NOTIFICATION]',
+            'pathCatdoc' => '/usr/bin/',
+            'pathPdfinfo' => '/usr/bin/',
+            'pathPdftotext' => '/usr/bin/',
+            'searchWordLength' => '4',
+        ],
         'powermail' => [
             'disableBackendModule' => '0',
             'disableIpLog' => '1',
@@ -87,6 +107,9 @@ return [
             'disablePluginInformationMailPreview' => '0',
             'enableCaching' => '0',
             'replaceIrreWithElementBrowser' => '0',
+        ],
+        'static_info_tables' => [
+            'enableManager' => '0',
         ],
     ],
     'FE' => [

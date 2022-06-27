@@ -104,14 +104,29 @@ return [
         'introduction' => [
             'packagePath' => 'typo3conf/ext/introduction/',
         ],
+        'cm_memo' => [
+            'packagePath' => 'typo3conf/ext/cm_memo/',
+        ],
+        'extension_builder' => [
+            'packagePath' => 'typo3conf/ext/extension_builder/',
+        ],
         'fp_masterquiz' => [
             'packagePath' => 'typo3conf/ext/fp_masterquiz/',
         ],
         'gkh_rss_import' => [
             'packagePath' => 'typo3conf/ext/gkh_rss_import/',
         ],
+        'ke_search' => [
+            'packagePath' => 'typo3conf/ext/ke_search/',
+        ],
+        'osm' => [
+            'packagePath' => 'typo3conf/ext/osm/',
+        ],
         'powermail' => [
             'packagePath' => 'typo3conf/ext/powermail/',
+        ],
+        'static_info_tables' => [
+            'packagePath' => 'typo3conf/ext/static_info_tables/',
         ],
     ],
     'version' => 5,

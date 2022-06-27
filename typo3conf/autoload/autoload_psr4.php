@@ -6,8 +6,13 @@ $typo3InstallDir = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
 
 return array(
     'BK2K\\BootstrapPackage\\' => array($typo3InstallDir . 'typo3conf/ext/bootstrap_package/Classes'),
+    'Cm\\CmMemo\\' => array($typo3InstallDir . 'typo3conf/ext/cm_memo/Classes'),
+    'EBT\\ExtensionBuilder\\' => array($typo3InstallDir . 'typo3conf/ext/extension_builder/Classes'),
     'Fixpunkt\\FpMasterquiz\\' => array($typo3InstallDir . 'typo3conf/ext/fp_masterquiz/Classes'),
     'GertKaaeHansen\\GkhRssImport\\' => array($typo3InstallDir . 'typo3conf/ext/gkh_rss_import/Classes'),
+    'In2code\\Osm\\' => array($typo3InstallDir . 'typo3conf/ext/osm/Classes'),
     'In2code\\Powermail\\' => array($typo3InstallDir . 'typo3conf/ext/powermail/Classes'),
+    'SJBR\\StaticInfoTables\\' => array($typo3InstallDir . 'typo3conf/ext/static_info_tables/Classes'),
     'TYPO3\\CMS\\Introduction\\' => array($typo3InstallDir . 'typo3conf/ext/introduction/Classes'),
+    'Tpwd\\KeSearch\\' => array($typo3InstallDir . 'typo3conf/ext/ke_search/Classes'),
 );
