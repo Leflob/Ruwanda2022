@@ -14,6 +14,7 @@
 # Ignore system folders, you should have them symlinked.
 # If not comment out the following entries.
 #/typo3
+/typo3/sysext/core/Documentation
 #/typo3_src
 #/typo3_src-*
 #/Packages

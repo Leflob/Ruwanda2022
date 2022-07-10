@@ -107,6 +107,9 @@ return [
         'cm_memo' => [
             'packagePath' => 'typo3conf/ext/cm_memo/',
         ],
+        'cm_multi' => [
+            'packagePath' => 'typo3conf/ext/cm_multi/',
+        ],
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
