@@ -6,7 +6,6 @@ $typo3InstallDir = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
 
 return array(
     'BK2K\\BootstrapPackage\\' => array($typo3InstallDir . 'typo3conf/ext/bootstrap_package/Classes'),
-    'Cm\\CmMemo\\' => array($typo3InstallDir . 'typo3conf/ext/cm_memo/Classes'),
     'Cm\\CmMulti\\' => array($typo3InstallDir . 'typo3conf/ext/cm_multi/Classes'),
     'EBT\\ExtensionBuilder\\' => array($typo3InstallDir . 'typo3conf/ext/extension_builder/Classes'),
     'Fixpunkt\\FpMasterquiz\\' => array($typo3InstallDir . 'typo3conf/ext/fp_masterquiz/Classes'),

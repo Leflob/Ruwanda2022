@@ -150,8 +150,8 @@
         },
         "extensionKey": "cm_multi",
         "name": "CM multiple choice",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "cm_multi",
+        "originalVendorName": "Cm",
         "persons": [
             {
                 "company": "Uni Trier",
@@ -189,7 +189,7 @@
     ],
     "storagePath": "C:\/xampp\/htdocs\/cm-praxis\/typo3conf\/ext\/",
     "log": {
-        "last_modified": "2022-06-29 08:38",
+        "last_modified": "2022-07-10 11:50",
         "extension_builder_version": "11.0.3",
         "be_user": " (1)"
     }

@@ -14,10 +14,11 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <f:debug>{_all}</f:debug>
+    <h1>Single View for Questions</h1>
 
     <f:flashMessages />
     <f:render partial="Questions/Properties" arguments="{questions:questions}" />
-    <f:link.action action="list">back</f:link.action><br />
+    <f:link.action action="list">Back to list</f:link.action><br />
+    <f:link.action action="new">New Questions</f:link.action>
 </f:section>
 </html>

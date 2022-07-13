@@ -14,7 +14,6 @@ namespace Cm\CmMulti\Controller;
  * (c) 2022 Florian Böhm <s4flboeh@uni-trier.de>, Uni Trier
  */
 
-
 /**
  * QuestionsController
  */

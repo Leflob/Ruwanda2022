@@ -16,19 +16,25 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="content">
 
     <f:flashMessages />
-    <f:debug>{_all}</f:debug>
-    <table class="tx_cmmulti table table-light">
-        <tr>
-            <th><f:translate key="tx_cmmulti_domain_model_questions.question" /></th>
 
-        </tr>
         <f:for each="{questions}" as="questions">
             <tr>
-                <td><f:link.action action="show" arguments="{questions : questions}">{questions.question}</f:link.action></td>
-
+                <f:render partial="Questions/Properties" arguments="{questions:questions}"/>
             </tr>
         </f:for>
+    <button type="button" onclick="evalQuiz()" class="btn btn-primary">Auswertung</button>
 
-    </table>
+    <script>
+        function evalQuiz(){
+            let answers = document.querySelectorAll(".list-group-item");
+            for (let answer of answers){
+                if (answer.children[0].getAttribute("data-correct")== 1){
+                    answer.classList.add("list-group-item-success");
+                }else {
+                    answer.classList.add("list-group-item-danger");
+                }
+            }
+        }
+    </script>
 </f:section>
 </html>

@@ -1,20 +1,23 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-cm-multi table">
-	<tr colspan = "2">
-		<td>{questions.question}</td>
-		<td></td>
-	</tr>
-	<f:for each="{questions.questionanswer}" as="answers">
-		<tr>
-			<td>{answers.answer}</td>
-			<td>
-				<f:if condition="answer.correct">
-					<f:then>"Ja"</f:then>
-					<f:else>"Nein</f:else>
+<div class="card mb-3">
+	<div class="card-header">
+		{questions.question}
+	</div>
+	<ul class = "list-group list-group-flush">
+		<f:for each="{questions.questionanswer}" as="answers">
+			<label class="list-group-item">
+				<f:if condition="{answers.correct}">
+					<f:then>
+						<input class="form-check-input me-1" data-correct="1" type="checkbox" value="">
+						{answers.answer}
+					</f:then>
+					<f:else>
+						<input class="form-check-input me-1" data-correct="0" type="checkbox" value="">
+						{answers.answer}
+					</f:else>
 				</f:if>
-				{answers.correct}
-			</td>
-		</tr>
-	</f:for>
-</table>
+			</label>
+		</f:for>
+	</ul>
+</div>
 </html>

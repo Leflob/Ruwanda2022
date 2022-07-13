@@ -14,7 +14,6 @@ namespace Cm\CmMulti\Domain\Model;
  * (c) 2022 Florian Böhm <s4flboeh@uni-trier.de>, Uni Trier
  */
 
-
 /**
  * Answers
  */
